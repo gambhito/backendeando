@@ -1,10 +1,10 @@
 const Usuario = require("../model/usuario");
 
 const getUserById = async (req, res) => {
-  const { id } = req.user;
+  const { userId } = req.params;
 
-  if (id.length === 24) {
-    Usuario.findById(id).then((usuario) => {
+  if (userId.length === 24) {
+    Usuario.findById(userId).then((usuario) => {
       if (!usuario) {
         return res.json({
           mensaje: "No se encontro ningun usuario con esa ID",

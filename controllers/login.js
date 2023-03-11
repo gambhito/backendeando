@@ -28,7 +28,7 @@ const login = async (req, res) => {
           usuario: {
             id,
             nombre,
-            token,
+            
           },
         });
       } else {
